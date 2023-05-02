@@ -1,0 +1,25 @@
+<p>phone works!</p>
+{{jin|json}}
+<table>
+    <thead>
+      <!-- <th>UserId</th> -->
+      <th>userid</th>
+      <th>id</th>
+      <th>title</th>
+      <th>body</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mob of jin">
+        <td>{{mob.userId}}</td>
+        <td>{{mob.id}}</td>
+        <td>{{mob.title}}</td>
+        <td>{{mob.body}}</td>
+    
+        <!-- <td>{{mob.image}}</td> -->
+         <!-- <td *ngFor="let image of mob.images">
+          <img [src]="image">
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="post()">Post Button</button>

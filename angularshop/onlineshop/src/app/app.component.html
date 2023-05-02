@@ -1,0 +1,43 @@
+<h1>Welcome to Aspire</h1>
+{{title}}
+{{name}}
+{{Company}}
+<div>
+    <h1 [align]="position" >Welcome Baby</h1>  <!--Property binding -->
+</div>
+
+<div>
+  <h1>{{message}}</h1>
+</div>
+
+<button (click)="changemessage()"> change Message</button> <!--Event binding-->
+<br>
+<br>
+
+<div> 
+  Enter the Employee name:<input type="text" [(ngModel)]="employeeName"> <!--Property binding p - c -->
+</div>
+<div>
+  <h4>The employee is:{{employeeName}}</h4>
+</div>
+
+<br>
+<br>
+
+<div>
+  <h3>I receive message from child :{{childMessage}}</h3>  <!--Event binding c - p-->
+</div>
+
+<app-user [pMessage]="parentMessage" (cMessage)="childMessage=$event"></app-user>
+
+
+<app-shirt></app-shirt>
+<app-salutation></app-salutation>
+<app-product></app-product>
+<app-button></app-button>
+<app-label></app-label>
+
+<app-phone></app-phone>
+<app-templatedriven></app-templatedriven>
+<app-reactiveformmodule></app-reactiveformmodule>
+

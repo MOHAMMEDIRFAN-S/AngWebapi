@@ -1,0 +1,12 @@
+<p>salutation works!</p>
+
+<div>
+    Enter your name;<input type="text" [(ngModel)]="username">
+</div>
+<div>
+    Select gender:
+    <input type="radio" [(ngModel)]="gender" value="M">Male
+
+    <input type="radio" [(ngModel)]="gender" value="F">Female
+</div>
+<h1>Hello {{username | gender:gender}}</h1>

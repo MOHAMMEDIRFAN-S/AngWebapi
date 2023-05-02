@@ -1,0 +1,53 @@
+<p>product works!</p>
+{{product|json}}
+
+<table>
+    <thead>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th *ngIf="status">Price</th>
+    </thead>
+    <tbody>
+        <!-- <tr *ngFor="let p of product">
+            <td>{{p.pid}}</td>
+            <td>{{p.pname}}</td>
+            <td *ngIf="status">{{p.price}}</td>
+        </tr> -->
+        <tr *ngFor="let p of product">
+            <td>{{p.pid}}</td>
+            <td>{{p.pname}}</td>
+            <td *ngIf="status">{{p.price}}</td>
+            </tr>
+        <tr>
+            <td><button (click)="Status()">{{status?'Hide':'Show'}} Price</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<br><br>
+choose your role:
+<select [(ngModel)]="role">
+    <option value="black">Employee</option>
+    <option value="purple">Visitor</option>
+    <option value="red">Client</option>
+    <option value="blue">Vendor</option>
+</select>
+<ul [ngStyle]="{'color':role}"  [ngSwitch]="role">
+    <li *ngSwitchCase="'black'">Your tag colour is black</li>
+    <li *ngSwitchCase="'purple'">Your tag colour is purple</li>
+    <li *ngSwitchCase="'red'">Your tag colour is red</li>
+    <li *ngSwitchCase="'blue'">Your tag colour is blue</li>
+</ul>
+<br><br>
+<div [ngClass]="{'info':status}">
+    <h1>Warning Message!!!</h1>
+</div>
+
+<br><br>
+
+<div>
+    <label appHighlighter>
+        Welcome you all!!!
+        
+    </label>
+</div>
